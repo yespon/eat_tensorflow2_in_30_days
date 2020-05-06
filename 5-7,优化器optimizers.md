@@ -1,7 +1,5 @@
 # 5-7,优化器optimizers
 
-
-
 机器学习界有一群炼丹师，他们每天的日常是：
 
 拿来药材（数据），架起八卦炉（模型），点着六味真火（优化算法），就摇着蒲扇等着丹药出炉了。
@@ -188,7 +186,7 @@ tf.print("loss=",model(tf.constant(0.0)))
 
 在keras.optimizers子模块中，它们基本上都有对应的类的实现。
 
-* SGD, 默认参数为纯SGD, 设置momentum参数不为0实际上变成SGDM, 考虑了一阶动量, 设置 nesterov为True后变成NAG，即 Nesterov Acceleration Gradient，在计算梯度时计算的是向前走一步所在位置的梯度。
+* SGD, 默认参数为纯SGD, 设置momentum参数不为0实际上变成SGDM, 考虑了一阶动量, 设置 nesterov为True后变成NAG，即 Nesterov Accelerated Gradient，在计算梯度时计算的是向前走一步所在位置的梯度。
 
 * Adagrad, 考虑了二阶动量，对于不同的参数有不同的学习率，即自适应学习率。缺点是学习率单调下降，可能后期学习速率过慢乃至提前停止学习。
 
@@ -196,7 +194,7 @@ tf.print("loss=",model(tf.constant(0.0)))
 
 * Adadelta, 考虑了二阶动量，与RMSprop类似，但是更加复杂一些，自适应性更强。
 
-* Adam, 同时考虑了一阶动量和二阶动量，可以看成RMSprop上进一步考虑了Momentum。
+* Adam, 同时考虑了一阶动量和二阶动量，可以看成RMSprop上进一步考虑了一阶动量。
 
 * Nadam, 在Adam基础上进一步考虑了 Nesterov Acceleration。
 
@@ -205,6 +203,8 @@ tf.print("loss=",model(tf.constant(0.0)))
 ```
 
 如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"Python与算法之美"下留言。作者时间和精力有限，会酌情予以回复。
+
+也可以在公众号后台回复关键字：**加群**，加入读者交流群和大家讨论。
 
 ![image.png](./data/Python与算法之美logo.jpg)
 

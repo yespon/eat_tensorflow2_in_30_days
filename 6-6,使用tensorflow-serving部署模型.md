@@ -1,7 +1,5 @@
 # 6-6,使用tensorflow-serving部署模型
 
-
-
 TensorFlow训练好的模型以tensorflow原生方式保存成protobuf文件后可以用许多方式部署运行。
 
 例如：通过 tensorflow-js 可以用javascrip脚本加载模型并在浏览器中运行模型。
@@ -262,6 +260,8 @@ print(predictions)
 ```
 
 如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"Python与算法之美"下留言。作者时间和精力有限，会酌情予以回复。
+
+也可以在公众号后台回复关键字：**加群**，加入读者交流群和大家讨论。
 
 ![image.png](./data/Python与算法之美logo.jpg)
 

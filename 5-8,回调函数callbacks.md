@@ -1,7 +1,5 @@
 # 5-8,回调函数callbacks
 
-
-
 tf.keras的回调函数实际上是一个类，一般是在model.fit时作为参数指定，用于控制在训练过程开始或者在训练过程结束，在每个epoch训练开始或者训练结束，在每个batch训练开始或者训练结束时执行一些操作，例如收集一些日志信息，改变学习率等超参数，提前终止训练过程等等。
 
 同样地，针对model.evaluate或者model.predict也可以指定callbacks参数，用于控制在评估或预测开始或者结束时，在每个batch开始或者结束时执行一些操作，但这种用法相对少见。
@@ -10,7 +8,7 @@ tf.keras的回调函数实际上是一个类，一般是在model.fit时作为参
 
 所有回调函数都继承至 keras.callbacks.Callbacks基类，拥有params和model这两个属性。
 
-其中params 是一个dict，记录了 training parameters (eg. verbosity, batch size, number of epochs...).
+其中params 是一个dict，记录了训练相关参数 (例如 verbosity, batch size, number of epochs 等等)。
 
 model即当前关联的模型的引用。
 
@@ -115,5 +113,7 @@ class LearningRateScheduler(callbacks.Callback):
 ```
 
 如果对本书内容理解上有需要进一步和作者交流的地方，欢迎在公众号"Python与算法之美"下留言。作者时间和精力有限，会酌情予以回复。
+
+也可以在公众号后台回复关键字：**加群**，加入读者交流群和大家讨论。
 
 ![image.png](./data/Python与算法之美logo.jpg)
